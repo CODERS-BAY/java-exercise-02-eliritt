@@ -14,11 +14,11 @@ public class Calculator {
     }
     
     public static float divide (float a, float b) {
-    	return a / b;
+    	return (float) a / b;
     }
     
     public static float modulo (float a, float b) {
-    	return a % b;
+    	return (float) a % b;
     }
     
     public static float pythagoras (float a, float b) {
@@ -99,24 +99,8 @@ public class Calculator {
     	   default:
     		   System.out.println("Please select a number between 1 and 5.");
     	   }
-    	   
-    	   System.out.println("""
-    	   		Would you like to calculate again?
-    	   		Press y for yes or any other key for abort.
-    	   		""");
-    	   
-    	   scanner.nextLine();
-    	   
-    	   String inputContinue = scanner.nextLine();
-    	   
-    	   if(inputContinue.equals("y")) {
-    		   running = true;
-    	   } else {
-    		   running = false;
-    	   }
        }
       
-       
        else {
     	   System.out.println("Type in the first number!");
     	   int input3 = scanner.nextInt();
@@ -166,9 +150,9 @@ public class Calculator {
        	   default:
        		   System.out.println("Please select a number between 1 and 5.");
        	   }
-    	   
+       }
        	   
-       	System.out.println("""
+    	System.out.println("""
     	   		Would you like to calculate again?
     	   		Press y for yes or any other key for abort.
     	   		""");
@@ -177,12 +161,9 @@ public class Calculator {
        	
     	   String inputContinue = scanner.nextLine();
     	   
-    	   if(inputContinue.equals("y")) {
-    		   running = true;
-    	   } else {
+    	   if(!inputContinue.equals("y")) {
     		   running = false;
     	   }
-       }
        } while (running);
       
 
